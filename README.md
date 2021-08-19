@@ -16,13 +16,16 @@
     <code>
         GET http://localhost:8080/animals
     </code>
+    <br/>
     <code>
         POST http://localhost:8080/animals
+        <pre>
         With body: {
             "kind": string,
             "positionX": number,
             "positionY": number
         }
+        </pre>
     </code>
 </p>
 
