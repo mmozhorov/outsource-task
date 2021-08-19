@@ -1,0 +1,41 @@
+{
+  "name": "cloudxshop",
+  "version": "1.0.0",
+  "description": "CloudX Shop",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && node ./build/index.js",
+    "build": "nodemon rimraf ./build && tsc",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^26.0.14",
+    "@types/node": "^14.0.24",
+    "jest": "^26.4.2",
+    "nodemon": "^2.0.4",
+    "ts-jest": "^26.4.0",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.7",
+    "@types/express": "^4.17.7",
+    "@types/jsonwebtoken": "^8.5.0",
+    "@types/pg": "^7.14.4",
+    "@types/uuid": "^8.0.0",
+    "ajv": "^6.12.3",
+    "ajv-errors": "^1.0.1",
+    "ajv-keywords": "^3.5.2",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "inversify": "^5.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.3.0",
+    "reflect-metadata": "^0.1.13",
+    "uuid": "^8.2.0",
+    "winston": "^3.3.3"
+  }
+}
