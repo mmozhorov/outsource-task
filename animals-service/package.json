@@ -1,7 +1,7 @@
 {
-  "name": "cloudxshop",
+  "name": "AnimalApp",
   "version": "1.0.0",
-  "description": "CloudX Shop",
+  "description": "Animal App for outsource",
   "main": "index.js",
   "scripts": {
     "start": "npm run build && node ./build/index.js",
