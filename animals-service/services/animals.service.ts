@@ -5,6 +5,7 @@ import 'reflect-metadata';
 import { DBInterface } from '../types/db.types';
 import { Animal } from '../types/animals.types';
 import { serviceLogger as log } from '../utils/logger.helpers';
+import { callHardCalcuationForAnimal } from './calculation.service';
 
 enum ANIMAL_STATUSES {
     PENDING = 'PENDING',
@@ -40,7 +41,19 @@ class AnimalsService{
                     [ animalId, kind, positionX, positionY, ANIMAL_STATUSES.PENDING ]
         );
 
+        callHardCalcuationForAnimal( animalId );
+
         return animal;
+    }
+
+    @log
+    public async updateAnimalStatus( animalId: string, status: string ): Promise<void>{
+        await this.DB.query(
+            `UPDATE ${ this.table }
+                SET status = $1
+                    WHERE id = $2`, 
+                    [ status, animalId ]
+        );
     }
 }
 

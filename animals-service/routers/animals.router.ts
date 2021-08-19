@@ -6,7 +6,6 @@ import { DB, DBInterface } from "../types/db.types";
 
 import { AnimalsService } from "../services/animals.service";
 import { routerErrorLog } from "../utils/logger.helpers";
-import { Animal } from '../types/animals.types';
 
 const router = express.Router();
 
